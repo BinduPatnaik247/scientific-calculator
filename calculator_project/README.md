@@ -36,23 +36,7 @@ Argparse syntax errors retain their normal stderr usage message. To pass a
 negative scientific literal that argparse might treat as a flag, put `--json`
 before `--`, e.g. `python3 -m calc\\\_app add --json -- -1e2 3`.
 
-## Judge the basic task
 
-```bash
-bash scripts/verify\\\_basic.sh
-```
-
-Expected: 18 unit tests pass, the arithmetic smoke checks pass, exit code 0,
-and `PASS: starter application checks`. The script also rejects any `.git` entry.
-
-To check error handling directly:
-
-```bash
-python3 -m calc\\\_app divide 10 0 --json
-echo "$?"
-# {"error": "Cannot divide by zero."}
-# 2
-```
 
 ## Files
 
